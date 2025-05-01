@@ -155,13 +155,10 @@
   <!-- Navbar -->
   <div class="navbar">
     <h1><img src="favicon.png" height="20px">  Gagan Texture and Designers</h1>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-icon" onclick="shareSite()">🔗</div>
   </div>
 
-  <div class="menu-items" id="menuItems">
-    <a href="#about">About</a>
-    <a href="#contact">Contact Us</a>
-  </div>
+ 
 
   <!-- Home Tab -->
   <div id="home" class="tab-content active">
@@ -340,6 +337,21 @@
       .then(reg => console.log("Service Worker registered:", reg.scope))
       .catch(err => console.log("Service Worker registration failed:", err));
   }
+<script>
+  function shareSite() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Gagan Texture and Designers',
+        text: 'Check out our designs and textures!',
+        url: window.location.href
+      }).then(() => {
+        console.log('Thanks for sharing!');
+      }).catch(console.error);
+    } else {
+      alert('Sharing is not supported on this browser. Copy the URL manually.');
+    }
+  }
+</script>
 
   </script>
 

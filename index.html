@@ -9,10 +9,9 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      padding-bottom: 60px; /* space for bottom tabs */
+      padding-bottom: 60px;
     }
 
-    /* Navbar Styles */
     .navbar {
       background-color: #333;
       color: white;
@@ -54,7 +53,6 @@
       background-color: #555;
     }
 
-    /* Slider Styles */
     .slider {
       position: relative;
       max-width: 100%;
@@ -67,7 +65,7 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-background-color: #86b0dd; 
+      background-color: #86b0dd;
       animation: fade 1s;
     }
 
@@ -76,12 +74,10 @@ background-color: #86b0dd;
       to { opacity: 1; }
     }
 
-    /* Page Section Styles */
     section {
       padding: 20px;
     }
 
-    /* Tab Page Handling */
     .tab-content {
       display: none;
     }
@@ -90,7 +86,6 @@ background-color: #86b0dd;
       display: block;
     }
 
-    /* Bottom Tabs */
     .bottom-nav {
       position: fixed;
       bottom: 0;
@@ -116,6 +111,39 @@ background-color: #86b0dd;
       font-weight: bold;
       color: #007BFF;
     }
+
+    /* Design Gallery */
+    .design-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+      
+    }
+
+    .design-gallery img {
+      width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+    }
+    .mat-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 10px;
+      margin-top: 100px;
+      padding: 10px;
+      
+    }
+
+    .mat-images img {
+      width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -131,16 +159,16 @@ background-color: #86b0dd;
     <a href="#contact">Contact Us</a>
   </div>
 
-  <!-- Tab Content: Home -->
+  <!-- Home Tab -->
   <div id="home" class="tab-content active">
     <div class="slider">
-      <img class="slides" src="i1.jpg" alt="Slide 1">
-      <img class="slides" src="i2.png" alt="Slide 2">
-      <img class="slides" src="i3.jpg" alt="Slide 3">
-      <img class="slides" src="i4.jpg" alt="Slide 4">
-      <img class="slides" src="i5.jpg" alt="Slide 5">
-      <img class="slides" src="i6.jpg" alt="Slide 6">
-      <img class="slides" src="i7.jpg" alt="Slide 7">
+      <img class="slides" src="images/i1.jpg" alt="Slide 1">
+      <img class="slides" src="images/i2.png" alt="Slide 2">
+      <img class="slides" src="images/i3.jpg" alt="Slide 3">
+      <img class="slides" src="images/i4.jpg" alt="Slide 4">
+      <img class="slides" src="images/i5.jpg" alt="Slide 5">
+      <img class="slides" src="images/i6.jpg" alt="Slide 6">
+      <img class="slides" src="images/i7.jpg" alt="Slide 7">
     </div>
 
     <section id="about">
@@ -155,7 +183,7 @@ background-color: #86b0dd;
     </section>
   </div>
 
-  <!-- Tab Content: Textures -->
+  <!-- Textures Tab -->
   <div id="textures" class="tab-content">
     <section>
       <h2>Textures</h2>
@@ -163,23 +191,97 @@ background-color: #86b0dd;
     </section>
   </div>
 
-  <!-- Tab Content: Designs -->
+  <!-- Designs Tab -->
   <div id="designs" class="tab-content">
     <section>
       <h2>Designs</h2>
       <p>Browse our latest design portfolio for inspiration.</p>
+      <div class="design-gallery">
+        <!-- 30 Design Images -->
+        <!-- You must have images from d1.jpg to d30.jpg in images/designs/ -->
+          <img src="d1.jpg" alt="Design 1">
+          <img src="d2.jpg" alt="Design 2">
+          <img src="d3.jpg" alt="Design 3">
+          <img src="d4.jpg" alt="Design 4">
+          <img src="d5.jpg" alt="Design 5">
+          <img src="d6.jpg" alt="Design 6">
+          <img src="d7.jpg" alt="Design 7">
+          <img src="d8.jpg" alt="Design 8">
+          <img src="d9.jpg" alt="Design 9">
+          <img src="c1.jpg" alt="Design 10">
+          <img src="c2.jpg" alt="Design 11">
+          <img src="c3.jpg" alt="Design 12">
+          <img src="c4.jpg" alt="Design 13">
+          <img src="c5.jpg" alt="Design 14">
+          <img src="c6.jpg" alt="Design 15">
+          <img src="c7.jpg" alt="Design 16">
+          <img src="c8.jpg" alt="Design 17">
+          <img src="c9.jpg" alt="Design 18">
+          <img src="e1.jpg" alt="Design 19">
+          <img src="e2.jpg" alt="Design 20">
+          <img src="e3.jpg" alt="Design 21">
+          <img src="e4.jpg" alt="Design 22">
+          <img src="e5.jpg" alt="Design 23">
+          <img src="e6.jpg" alt="Design 24">
+          <img src="e7.jpg" alt="Design 25">
+          <img src="e8.jpg" alt="Design 26">
+          <img src="e9.jpg" alt="Design 27">
+          <img src="f1.jpg" alt="Design 28">
+          <img src="f2.jpg" alt="Design 29">
+          <img src="f3.jpg" alt="Design 30">
+          <img src="f4.jpg" alt="Design 31">
+          <img src="f5.jpg" alt="Design 32">
+          <img src="f6.jpg" alt="Design 33">
+          <img src="f7.jpg" alt="Design 34">
+          <img src="f8.jpg" alt="Design 35">
+          <img src="f9.jpg" alt="Design 36">
+          <img src="g1.jpg" alt="Design 37">
+          <img src="g2.jpg" alt="Design 38">
+          <img src="g3.jpg" alt="Design 39">
+          <img src="g4.jpg" alt="Design 40"> 
+          <img src="g5.jpg" alt="Design 41">
+          <img src="g6.jpg" alt="Design 42">   
+          <img src="g7.jpg" alt="Design 43"> 
+          <img src="g8.jpg" alt="Design 44">
+          <img src="g9.jpg" alt="Design 45">  
+          <img src="h1.jpg" alt="Design 46"> 
+          <img src="h3.jpg" alt="Design 48"> 
+          <img src="h2.jpg" alt="Design 47">      
+          <img src="h4.jpg" alt="Design 49">      
+          <img src="h5.jpg" alt="Design 50">      
+          <img src="h6.jpg" alt="Design 51">      
+          <img src="h7.jpg" alt="Design 52">      
+          <img src="h8.jpg" alt="Design 53">      
+          <img src="h9.jpg" alt="Design 54">      
+          <img src="j1.jpg" alt="Design 55">      
+          <img src="j2.jpg" alt="Design 56">      
+          <img src="j3.jpg" alt="Design 57">      
+          <img src="j4.jpg" alt="Design 58">      
+      </div>
     </section>
   </div>
 
-  <!-- Tab Content: Materials -->
+  <!-- Materials Tab -->
   <div id="materials" class="tab-content">
     <section>
       <h2>Materials</h2>
       <p>We use top-quality materials for all our projects.</p>
+      <div class="mat-cont">
+      <div class="mat-images">
+        <img src="m1.jpg" alt="mat1">
+        <img src="m2.jpg" alt="mat2">
+        <img src="m3.jpg" alt="mat3">
+        <img src="m4.jpg" alt="mat4">
+        <img src="m5.jpg" alt="mat5">
+        <img src="m6.jpg" alt="mat6">
+        <img src="m7.png" alt="mat7">
+        <img src="m8.jpg" alt="mat8">
+        <img src="m9.jpg" alt="mat9">
+      </div></div>
     </section>
   </div>
 
-  <!-- Bottom Navigation Tabs -->
+  <!-- Bottom Navigation -->
   <div class="bottom-nav">
     <button class="active" onclick="switchTab('home', this)">Home</button>
     <button onclick="switchTab('textures', this)">Textures</button>
@@ -187,9 +289,8 @@ background-color: #86b0dd;
     <button onclick="switchTab('materials', this)">Materials</button>
   </div>
 
-  <!-- Script -->
+  <!-- Scripts -->
   <script>
-    // Menu toggle
     function toggleMenu() {
       const menu = document.getElementById('menuItems');
       menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
@@ -204,7 +305,7 @@ background-color: #86b0dd;
       }
     }
 
-    // Auto slider
+    // Image Slider
     let slideIndex = 0;
     showSlides();
     function showSlides() {
@@ -218,16 +319,13 @@ background-color: #86b0dd;
       setTimeout(showSlides, 3000);
     }
 
-    // Tab switching
+    // Tab Switching
     function switchTab(tabId, button) {
-      // Hide all tab contents
       document.querySelectorAll('.tab-content').forEach(tab => {
         tab.classList.remove('active');
       });
-      // Show selected tab
       document.getElementById(tabId).classList.add('active');
 
-      // Update active button
       document.querySelectorAll('.bottom-nav button').forEach(btn => {
         btn.classList.remove('active');
       });

@@ -1,12 +1,12 @@
 const CACHE_NAME = "gagan-cache-v1";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/manifest.json",
-  "/favicon.png",
-  "/android-chrome-192.192.png",
-  "/android-chrome-512x512.png",
-  // Add all images you use here
+  "/gaganatexture/",
+  "/gaganatexture/index.html",
+  "/gaganatexture/manifest.json",
+  "/gaganatexture/favicon.png",
+  "/gaganatexture/icon-192.png",
+  "/gaganatexture/icon-512.png",
+  // Add other image paths here too
 ];
 
 self.addEventListener("install", (event) => {

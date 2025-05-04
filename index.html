@@ -4,15 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Texture and Designers</title>
-  <link rel="icon" type="image/png" href="favicon.png" >
-   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" >
-   <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" >
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="manifest" href="/gaganatexture/manifest.json">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family:sans-serif;
       padding-bottom: 60px;
     }
 
@@ -24,10 +27,10 @@
       align-items: center;
       justify-content: space-between;
       position: relative;
+      flex-wrap: wrap;
     }
 
     .navbar h1 {
-      margin: 0;
       font-size: 20px;
     }
 
@@ -36,29 +39,7 @@
       cursor: pointer;
     }
 
-    .menu-items {
-      display: none;
-      background-color: #444;
-      position: absolute;
-      top: 58px;
-      right: 20px;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-
-    .menu-items a {
-      display: block;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-    }
-
-    .menu-items a:hover {
-      background-color: #555;
-    }
-
     .slider {
-      position: relative;
       max-width: 100%;
       height: 400px;
       overflow: hidden;
@@ -95,7 +76,7 @@
       bottom: 0;
       width: 100%;
       display: flex;
-      background-color: #ffffff;
+      background-color: #fff;
       border-top: 1px solid #ccc;
       box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
       z-index: 100;
@@ -104,11 +85,10 @@
     .bottom-nav button {
       flex: 1;
       padding: 12px 0;
-      font-size: 16px;
+      font-size: 14px;
       border: none;
       background: none;
       cursor: pointer;
-      outline: none;
     }
 
     .bottom-nav button.active {
@@ -116,39 +96,25 @@
       color: #007BFF;
     }
 
-    /* Design Gallery */
-    .design-gallery {
+    .design-gallery,
+    .mat-images {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 10px;
       margin-top: 20px;
-      
-    }
-
-    .design-gallery img {
-      width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-    }
-    .mat-images {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 10px;
-      margin-top: 100px;
       padding: 10px;
-      
     }
 
+    .design-gallery img,
     .mat-images img {
       width: 100%;
-  height: 150px;
-  object-fit: contain;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+      height: 150px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
-  .video-wrapper {
+
+    .video-wrapper {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
@@ -172,42 +138,149 @@
     }
 
     #fl p {
-      margin-left: 32%;
+      margin: 20px auto;
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-#fl p a{
-      padding-left:10px;
-padding-right:10px;
 
+    #fl p a {
+      padding: 10px;
+      margin: 5px;
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
     }
 
     #about, #contact {
       text-align: center;
+    }
+
+    .texture-type {
+      font-size: 36px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-style: oblique;
+      color: brown;
+      padding: 10px;
+    }
+
+    #textures {
+      background-color: rgb(250, 250, 162);
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .texture-type li {
+      border: 2px solid rgb(255, 255, 255);
+      margin: 20px auto;
+      border-radius: 10px;
+      padding: 10px;
+      list-style: none;
+      font-weight:bold;
+    }
+#t1{
+background:url('bubble.jpg');
 }
-.texture-type{
-font-size:50px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-style: oblique;
-color:red;
+#t2{
+background:url('plus.jpg');
+}
+#t3{
+background:url('vertical.jpg');
+}
+#t4{
+background:url('horizontal.jpg');
+}
+#t5{
+background:url('raindrop.jpg');
+}
+#t6{
+background:url('zigzag.jpg');
+}
+#t7{
+background:url('roller.jpg');
+}
+
+
+    /* Responsive CSS */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar h1 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .slider {
+        height: auto;
+      }
+
+      .slides {
+        max-height: 300px;
+      }
+
+      .design-gallery,
+      .mat-images {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      }
+
+      .bottom-nav {
+        flex-direction: column;
+        position: static;
+      }
+
+      .bottom-nav button {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      .texture-type {
+        font-size: 24px;
+      }
+
+      .texture-type li {
+        font-size: 16px;
+        padding: 8px;
+      }
+
+      #fl p {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+      }
+
+      #fl p a {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+    .carousel {
+     margin-left:25%; 
+  width: 50%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.review {
+  display: flex;
+  transition: transform 1s ease-in-out;
 
 }
-#textures
-{
-  background-color: rgb(140, 140, 237);
-  text-align: center;
-  font-size: 20px;
-  
+
+.review img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: contain;
+  height: 300px;
+  border-radius: 10px;
 }
-.texture-type li{
-height: 100px;
-border: 2px solid blue;
-margin: 20px;
-background-color: aliceblue;
-border-radius: 10px;
-padding: 20px;
-list-style: none;
+
+.carousel:hover {
+  cursor: pointer;
 }
   </style>
 </head>
@@ -215,79 +288,80 @@ list-style: none;
 
   <!-- Navbar -->
   <div class="navbar">
-    <h1><img src="favicon.png" height="20px">  Gagana Texture and Designers</h1>
+    <h1><img src="favicon.png" height="20px"> Gagana Texture and Designers</h1>
     <div class="menu-icon" onclick="shareSite()"><i class="fas fa-share-alt"></i></div>
   </div>
 
- 
-
-  <!-- Home Tab -->
+  <!-- Tabs -->
   <div id="home" class="tab-content active">
     <div class="slider">
-      <img class="slides" src="i1.jpg" alt="Slide 1">
-      <img class="slides" src="i2.png" alt="Slide 2">
-      <img class="slides" src="i3.jpg" alt="Slide 3">
-      <img class="slides" src="i4.jpg" alt="Slide 4">
-      <img class="slides" src="i5.jpg" alt="Slide 5">
-      <img class="slides" src="i6.jpg" alt="Slide 6">
-      <img class="slides" src="i7.jpg" alt="Slide 7">
+      <img class="slides" src="i1.jpg">
+      <img class="slides" src="i2.png">
+      <img class="slides" src="i3.jpg">
     </div>
-<h3>Watch Our Work</h3>
+
+    <h3>Watch Our Work</h3>
     <div class="video-wrapper">
       <div id="player" class="video-frame"></div>
     </div>
 
-
     <section id="about">
       <h2>About Us</h2>
-      <p>We are Gagan Texture and Designers, bringing creativity and quality to every project.</p>
+      <p>We are Gagana Texture and Designers, bringing creativity and quality to every project.</p>
     </section>
-
+    <div class="carousel">
+      <div class="review" id="review">
+      <img class="slide" src="r1.jpeg">
+      <img class="slide" src="r2.jpeg">
+      <img class="slide" src="r3.jpeg">
+      <img class="slide" src="r4.jpeg">
+      <img class="slide" src="r5.jpeg">
+      <img class="slide" src="r6.jpeg">
+      <img class="slide" src="r7.jpeg">
+      <img class="slide" src="r1.jpeg">
+    </div>
+    </div>
     <section id="contact">
       <h2>Contact Us</h2>
-      <p>Email: swamy008@gmail.com.com</p>
-      <p>Phone: +91-8105939912</p>
-            <p> +91-7349780912</p>
+      <p>Email: swamy008@gmail.com</p>
+      <p>Phone: +91-8105939912, +91-7349780912</p>
     </section>
-<div id="fl">
+
+    <div id="fl">
       <h3>Follow Us</h3>
       <p>
         <a href="https://www.facebook.com/share/193WVDPt4C/"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://www.instagram.com/gagana_texture_designer_12?igsh=ODd3NWZzZ3hjM290"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://youtube.com/@gaganatexturedesigner?si=a2J1vOJYIVGQ_b2a"><i class="fab fa-youtube"></i> YouTube</a>
         <a href="https://g.co/kgs/DzG2cLv"><i class="fas fa-map-marker-alt"></i> Google Maps</a>
-        <a href="https://www.instagram.com/gagana_texture_designer_12?igsh=ODd3NWZzZ3hjM290" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://youtube.com/@gaganatexturedesigner?si=a2J1vOJYIVGQ_b2a" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
       </p>
     </div>
-
   </div>
 
-  <!-- Textures Tab -->
   <div id="textures" class="tab-content">
     <section>
       <h2>Textures</h2>
       <p>Explore a wide variety of wall and surface textures.</p>
-	<div class="texture-type">
-    <ul><li>Bubble texture design</li>
-            <li>Plus texture design</li>
-      <li>Vertical texture design</li>
-      <li>horizontal texture design</li>
-      <li>Rain drop texture design</li>
-<li>Zig zag texture design</li>
-<li>Roller texture design</li>
- </ul>
-</div>
+      <div class="texture-type">
+        <ul>
+          <li id="t1">BUBBLE TEXTURE</li>
+          <li id="t2">PLUS TEXTURE</li>
+          <li id="t3">VERTICAL TEXTURE</li>
+          <li id="t4">HORIZONTAL TEXTURE</li>
+          <li id="t5">RAIN DROP TEXTURE</li>
+          <li id="t6">ZIG ZAG TEXTURE</li>
+          <li id="t7">ROLLER TEXTURE</li>
+        </ul>
+      </div>
     </section>
   </div>
 
-  <!-- Designs Tab -->
   <div id="designs" class="tab-content">
     <section>
       <h2>Designs</h2>
       <p>Browse our latest design portfolio for inspiration.</p>
       <div class="design-gallery">
-        <!-- 30 Design Images -->
-        <!-- You must have images from d1.jpg to d30.jpg in images/designs/ -->
-          <img src="d1.jpg" alt="Design 1">
+        <img src="d1.jpg" alt="Design 1">
           <img src="d2.jpg" alt="Design 2">
           <img src="d3.jpg" alt="Design 3">
           <img src="d4.jpg" alt="Design 4">
@@ -345,18 +419,18 @@ list-style: none;
           <img src="j2.jpg" alt="Design 56">      
           <img src="j3.jpg" alt="Design 57">      
           <img src="j4.jpg" alt="Design 58">      
+
+        <!-- Add more images here -->
       </div>
     </section>
   </div>
 
-  <!-- Materials Tab -->
   <div id="materials" class="tab-content">
     <section>
       <h2>Materials</h2>
       <p>We use top-quality materials for all our projects.</p>
-      <div class="mat-cont">
       <div class="mat-images">
-        <img src="m1.jpg" alt="mat1">
+               <img src="m1.jpg" alt="mat1">
         <img src="m2.jpg" alt="mat2">
         <img src="m3.jpg" alt="mat3">
         <img src="m4.jpg" alt="mat4">
@@ -365,11 +439,12 @@ list-style: none;
         <img src="m7.png" alt="mat7">
         <img src="m8.jpg" alt="mat8">
         <img src="m9.jpg" alt="mat9">
-      </div></div>
+        <!-- Add more images here -->
+      </div>
     </section>
   </div>
 
-  <!-- Bottom Navigation -->
+  <!-- Bottom Nav -->
   <div class="bottom-nav">
     <button class="active" onclick="switchTab('home', this)">Home</button>
     <button onclick="switchTab('textures', this)">Textures</button>
@@ -377,104 +452,95 @@ list-style: none;
     <button onclick="switchTab('materials', this)">Materials</button>
   </div>
 
-  <!-- Scripts -->
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById('menuItems');
-      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    // Tab switching
+    function switchTab(tabId, button) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      document.querySelectorAll('.bottom-nav button').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
     }
 
-    window.onclick = function(event) {
-      if (!event.target.matches('.menu-icon')) {
-        const menu = document.getElementById('menuItems');
-        if (menu.style.display === 'block') {
-          menu.style.display = 'none';
-        }
-      }
-    }
-
-    // Image Slider
+    // Slider
     let slideIndex = 0;
     showSlides();
     function showSlides() {
-      let slides = document.getElementsByClassName("slides");
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
+      const slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
       slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
+      if (slideIndex > slides.length) slideIndex = 1;
       slides[slideIndex - 1].style.display = "block";
       setTimeout(showSlides, 3000);
     }
 
-    // Tab Switching
-    function switchTab(tabId, button) {
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      document.getElementById(tabId).classList.add('active');
-
-      document.querySelectorAll('.bottom-nav button').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      button.classList.add('active');
+    // Share
+    function shareSite() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Gagana Texture and Designers',
+          text: 'Check out our designs and textures!',
+          url: window.location.href
+        }).then(() => console.log('Thanks for sharing!'))
+          .catch(console.error);
+      } else {
+        alert('Sharing not supported on this browser.');
+      }
     }
-     if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js")
-      .then(reg => console.log("Service Worker registered:", reg.scope))
-      .catch(err => console.log("Service Worker registration failed:", err));
-  }
 
-  function shareSite() {
-    if (navigator.share) {
-      navigator.share({
-        title: 'Gagan Texture and Designers',
-        text: 'Check out our designs and textures!',
-        url: window.location.href
-      }).then(() => {
-        console.log('Thanks for sharing!');
-      }).catch(console.error);
-    } else {
-      alert('Sharing is not supported on this browser. Copy the URL manually.');
-    }
-  }
- let tag = document.createElement('script');
+    // YouTube
+    let tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     let firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
     let player;
-
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
         videoId: 'y93AOo9tz2M',
         playerVars: {
-          autoplay: 1,
-          controls: 0,
-          mute: 1,
-          modestbranding: 1,
-          rel: 0,
-          loop: 1,
+          autoplay: 1, controls: 0, mute: 1,
+          modestbranding: 1, rel: 0, loop: 1,
           playlist: 'y93AOo9tz2M'
         },
         events: {
-          'onReady': function(event) {
+          'onReady': event => {
             event.target.playVideo();
             document.querySelector('.video-frame').style.opacity = "1";
           },
-          'onStateChange': onPlayerStateChange
+          'onStateChange': event => {
+            document.querySelector('.video-frame').style.opacity =
+              (event.data === YT.PlayerState.PLAYING) ? "1" : "0.4";
+          }
         }
       });
     }
+    const review = document.getElementById('review');
+  const images = review.querySelectorAll('img');
+  const total = images.length;
+  let index = 0;
 
-    function onPlayerStateChange(event) {
-      if (event.data === YT.PlayerState.PLAYING) {
-        document.querySelector('.video-frame').style.opacity = "1";
-      } else {
-        document.querySelector('.video-frame').style.opacity = "0.4";
-      }
+  function slideImages() {
+    index++;
+    review.style.transform = `translateX(-${index * 100}%)`;
+    if (index === total - 1) {
+      setTimeout(() => {
+        review.style.transition = 'none'; // no animation
+        review.style.transform = 'translateX(0)';
+        index = 0;
+      }, 1000); // wait until transition ends
     }
-  </script>
+  }
 
+  let slideInterval = setInterval(slideImages, 3000);
+
+  // Pause on hover
+  document.querySelector('.carousel').addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+  });
+
+  document.querySelector('.carousel').addEventListener('mouseleave', () => {
+    slideInterval = setInterval(slideImages, 3000);
+  });
+  </script>
 </body>
 </html>
